@@ -1,0 +1,34 @@
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  padding-right: 25%;
+  padding-left: 25%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+textarea {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 2px solid black;;
+  outline: 0;
+}
+
+div {
+
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+
+button {
+  color: white;
+  font-family: Bungee;
+  background-color: blue;
+}
+
