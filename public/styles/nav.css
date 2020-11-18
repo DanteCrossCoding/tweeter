@@ -1,17 +1,22 @@
 nav {
   display: flex;
+  position: fixed;
+  top: -10px;
+  width: 100%;
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 span {
   display: flex;
+  align-items: center;
   font-family: Bungee;
   padding-top: 1.5em;
   padding-left: 1.5em;
   padding-bottom: 1.5em;
+  padding-right: 1.5em;
   
 }
 
@@ -20,5 +25,8 @@ span {
   align-items: center;
   justify-self: flex-end;
   padding-right: 1.5em;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
+  padding-bottom: 1.5em;
   
 }

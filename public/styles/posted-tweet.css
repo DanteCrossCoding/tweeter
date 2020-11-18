@@ -1,0 +1,40 @@
+.tweet {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.tweet:hover {
+  box-shadow: 10px 10px 5px grey;
+}
+
+.handle {
+  visibility: hidden;
+}
+
+.handle:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+h4 {
+  border-bottom: 2px solid black;
+  margin-bottom: 0px;
+}
+
+h6 {
+  margin-top: 0px;
+}
