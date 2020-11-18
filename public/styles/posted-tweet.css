@@ -10,18 +10,29 @@
   padding-right: 5%;
 }
 
+.handle {
+  margin-top: 0px;
+  display: none;
+}
+
+
 .tweet:hover {
   box-shadow: 10px 10px 5px grey;
+  
+}
+.tweet:hover div.handle {
+  display: block;
 }
 
-.handle {
-  visibility: hidden;
+/* .tweet-header:hover + .handle {
+  display: block;
+  color: #545149
+} */
+
+h5 {
+  margin-top: 0px;
 }
 
-.handle:hover {
-  visibility: visible;
-  opacity: 1;
-}
 
 .tweet-header {
   display: flex;
