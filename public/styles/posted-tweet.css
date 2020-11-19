@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   border: solid;
+  border-radius: 5px;
   margin-top: 10px;
   margin-left: 100px;
   margin-right: 100px;
@@ -10,11 +11,24 @@
   padding-right: 5%;
 }
 
+.tweet-header {
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+  height: 60px;
+}
+
+textarea {
+  line-height: .5;
+}
+
 .handle {
-  margin-top: 0px;
   display: none;
 }
 
+.tweet-header div:last-child {
+  margin-left: auto;
+}
 
 .tweet:hover {
   box-shadow: 10px 10px 5px grey;
@@ -24,28 +38,37 @@
   display: block;
 }
 
-/* .tweet-header:hover + .handle {
-  display: block;
-  color: #545149
-} */
-
 h5 {
   margin-top: 0px;
 }
-
-
-.tweet-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-
 
 h4 {
   border-bottom: 2px solid black;
   margin-bottom: 0px;
 }
 
+
+.footer {
+  display: flex;
+  height: 25px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer div:first-child {
+  margin-right: auto;
+}
+div.date {
+  padding-top: 0;
+}
+div.f {
+  padding-top: 0;
+}
+div.r {
+  padding-top: 0;
+}
+div.h {
+  padding-top: 0;
+}
 h6 {
-  margin-top: 0px;
+  margin-top: 0;
 }
