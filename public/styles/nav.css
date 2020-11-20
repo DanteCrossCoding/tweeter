@@ -22,6 +22,7 @@ nav {
 
 .nav-write {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-self: flex-end;
   padding-right: 1.5em;
@@ -29,4 +30,10 @@ nav {
   padding-left: 1.5em;
   padding-bottom: 1.5em;
   
+}
+#arrow {
+  display: inline;
+  height: 5px;
+  color: red;
+  animation: 0.3s infinite alternate bob;
 }

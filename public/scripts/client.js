@@ -6,37 +6,41 @@
 
 $(function() {
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
+  $(".alert").hide();
+  
+  //submission, error validation, and async posting of new tweets
+  $('.new-tweet form').submit(function(event) {
+    event.preventDefault();
+    const maxChar = 140;
+    const $tweetText = $('.new-tweet textarea');
+    
+    if ($tweetText.val() === "") {
+      $("#alert1").slideDown('slow');
+    } else if ($tweetText.val().length > maxChar) {
+      $("#alert2").slideDown('slow');
     }
-  ]
 
+    const formData = $( this ).serialize();
+    $.ajax('/tweets', {type: "post", data: formData, success: (d) => console.log(d)})
+      .then((data) => {
+        $tweetText.val("");
+        $( ".new-tweet .counter" ).val(maxChar);
+        $('.tweets').empty();
+        $(".alert").hide();
+        loadTweets();
+      })
+      .catch((err) => {
+
+      });
+  });
+//Escape function to prevent hijacking threats
   const escape = (str) => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
 
+//puts tweets into HTML form accessible to css layout
 const createTweetElement = (tweet) => {
   const dateInMs = 1000 * 60 * 60 * 24;
   const daysGoneBy = Math.floor((Date.now() - tweet.created_at) / dateInMs);
@@ -62,7 +66,7 @@ const createTweetElement = (tweet) => {
   `);
   return $tweet;
 };
-
+//Loop that handles tweets order on the page
 const renderTweets = (tweets,target) => {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
@@ -70,6 +74,7 @@ const renderTweets = (tweets,target) => {
   }
 };
 
+//Loads the tweets
 const loadTweets = () => {
   console.log('/tweets')
   $.ajax('/tweets', {type: 'get'})

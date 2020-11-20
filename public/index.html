@@ -30,7 +30,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
-      <span class="nav-write">Write a new tweet<i class="fas fa-angle-double-down-arrow"></i></span>
+      <span class="nav-write">Write a new tweet<a href="#new-tweet"><i id="arrow" class="fas fa-angle-double-down"></i></a></span>
     </nav>
     
     <header>
@@ -45,7 +45,19 @@
   
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main id="new-tweet" class="container">
+     
+      <div>
+
+        <section class="alert" id="alert1">
+          <span class="warning-text">Cannot post nothing! Please enter text.</span>
+        </section>
+        <section class="alert" id="alert2">
+          <span class="warnning-text">Tweet exceeds 140 character limit!</span>
+        </section>
+
+      </div>
+
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
