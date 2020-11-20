@@ -25,6 +25,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  
+ /*Styling for error message on new tweets */
  .alert{
   display: flex;
   justify-content: center;
@@ -41,13 +42,12 @@ body {
   font-size: medium;
  }
 
-
-
 .hidden {
   width: 0;
   height: 0;
   display: none
 }
+
 
 main {
   display: flex;
@@ -58,15 +58,14 @@ main {
   background-color: #f4f1ec;
 }
 
+/* Styling for showing invisible features once cursor hovers over element*/
 .tweet:hover {
   box-shadow: 10px 10px 5px grey;
   font-weight: 400;
 }
-
 .tweet:hover header > *:last-child {
   display: inline-block;
 }
-
 .tweet:hover footer > *:last-child {
   display: inline-block;
 }
@@ -138,6 +137,8 @@ main {
   color: #4056A1;
   padding-right: 0.5em;
 }
+
+/* Different media styling based on screen size*/
 
 @media only screen and (min-width : 1024px) {
   body {

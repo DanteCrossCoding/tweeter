@@ -6,9 +6,9 @@
 
 $(function() {
 
+  //submission, error validation, and async posting of new tweets
   $(".alert").hide();
   
-  //submission, error validation, and async posting of new tweets
   $('.new-tweet form').submit(function(event) {
     event.preventDefault();
     const maxChar = 140;
@@ -33,6 +33,7 @@ $(function() {
 
       });
   });
+
 //Escape function to prevent hijacking threats
   const escape = (str) => {
     let div = document.createElement('div');
@@ -85,7 +86,7 @@ const loadTweets = () => {
 
     });
 };
-
+//Tweet Loader
 loadTweets();
 
 });
