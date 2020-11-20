@@ -17,3 +17,9 @@ It used Ajax, JQuery, HTML5 and CSS to generate an async, locally hosted page.
 - Express
 - Node 5.10.x or above
 - JQuery 3.4.1
+
+##Screenshots
+
+!["Screenshot of Tweeter Desktop view"](https://raw.githubusercontent.com/DanteCrossCoding/tweeter/master/docs/TWEETER_Desktop.png)
+!["Screenshot of hover feature"](https://raw.githubusercontent.com/DanteCrossCoding/tweeter/master/docs/TWEETER_hoverfeature.png)
+!["Screenshot of tablet view"](https://raw.githubusercontent.com/DanteCrossCoding/tweeter/master/docs/TWEETER_tabletview_mainpage.png)
