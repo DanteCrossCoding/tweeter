@@ -21,6 +21,7 @@ $(function() {
     }
 
     const formData = $( this ).serialize();
+    if ($tweetText.val().length <= maxChar)
     $.ajax('/tweets', {type: "post", data: formData, success: (d) => console.log(d)})
       .then((data) => {
         $tweetText.val("");

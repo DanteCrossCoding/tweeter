@@ -12,10 +12,3 @@ $(document).ready(function() {
   })
   
 });
-
-// $(document).ready(function() {
-//   charAvailable = $('.counter').text(availableChar);
-//   if (charAvailable < 0) {
-//     $('.counter').css('color', 'red');
-//   }
-// })
